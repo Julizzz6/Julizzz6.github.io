@@ -69,19 +69,21 @@
     </script>
 </head>
 <body>
-    <div class="container">
-        <h1>¿Quieres ser mi San Valentín? ❤️</h1>
-        <form onsubmit="enviarYRedirigir(event)">
-            <div class="form-group">
-                <label for="nombre">Tu hermoso nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Tu correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-           <button type="submit">Sí, quiero 💖</button>
-        </form>
-    </div>
+    <form action="enviar.php" method="post"> 
+        <div class="container">
+            <h1>¿Quieres ser mi San Valentín? ❤️</h1>
+            <form onsubmit="enviarYRedirigir(event)">
+                <div class="form-group">
+                    <label for="nombre">Tu hermoso nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Tu correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                    <button type="submit">Sí, quiero 💖</button>
+            </form>
+        </div>
+    </form>    
 </body>
 </html>
