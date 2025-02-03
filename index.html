@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️</title>
+    <link rel="icon" href="ima/cora.ico">
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6e6;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        .no {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="yellow.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    <div class="container">
+        <h1>¿Quieres ser mi San Valentín? 💖</h1>
+        <button class="btn yes" onclick="redirectToPhotos()">Sí 💕</button>
+        <button class="btn no" id="noBtn" onmouseover="moveButton()">No 💔</button>
+        <p id="message" style="display:none; font-size: 20px; color: #ff4d4d; margin-top: 20px;">¡Sabía que dirías que sí! Te amo 💖</p>
+    </div>
+    <script>
+        function redirectToPhotos() {
+            window.location.href = "fotos.html";
+        }
+        function moveButton() {
+            let noBtn = document.getElementById("noBtn");
+            let x = Math.random() * window.innerWidth * 0.6;
+            let y = Math.random() * window.innerHeight * 0.6;
+            noBtn.style.position = "absolute";
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
